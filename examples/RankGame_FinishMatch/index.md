@@ -5,7 +5,7 @@ Ends a rank match. Adjust the players’ rating and stats if not a tie. Updates 
 Based on the brainCloud TicTacToe example.
 
 ## Script
-Click RankGame_AutoJoinMatch.cloudcode.js.zip to download the file.
+Click [RankGame_AutoJoinMatch.cloudcode.js](RankGame_FinishMatch.cloudcode.js) to download the file.
 
 ## Usage / Setup
 To configure this script, simply import it into your app.

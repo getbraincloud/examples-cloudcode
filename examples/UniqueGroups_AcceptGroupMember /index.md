@@ -7,7 +7,7 @@ If the user is already in a group, this script will throw a failure message that
 If the user has more group join requests, this script will clean up the remaining requests.
 
 ## Script
-Click UniqueGroups_AcceptGroupMember.cloudcode.js.zip to download the file.
+Click [UniqueGroups_AcceptGroupMember.cloudcode.js](UniqueGroups_AcceptGroupMember.cloudcode.js) to download the file.
 
 ## Usage / Setup
 To configure this script, simply import it into your app.
@@ -29,7 +29,7 @@ The script takes the following parameters:
 }
 ```
 ## Debug
-Click UTest_UniqueGroups_AcceptGroupMember.cloudcode.js to view the optional debug script. Right-click to download it.
+Click [UTest_UniqueGroups_AcceptGroupMember.cloudcode.js](Test_UniqueGroups_AcceptGroupMember.cloudcode.js) to view the optional debug script. Right-click to download it.
 
 Example success response
 ```json

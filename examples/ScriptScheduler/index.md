@@ -7,7 +7,7 @@ If the interval is less then 60 min, it will only make sure there is no duplicat
 If the interval is more then 60 min (i.e not < 60) it will make sure there is no duplicate within 24 hours.
 
 ## Script
-Click ScriptScheduler.cloudcode.js.zip to download the file
+Click [ScriptScheduler.cloudcode.js](ScriptScheduler.cloudcode.js) to download the file
 
 ## Usage
 To configure this script, simply import it into your app.

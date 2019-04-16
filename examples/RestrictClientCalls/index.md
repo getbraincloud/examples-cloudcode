@@ -7,7 +7,7 @@ The script can be configured in one of two ways:
 * whitelist – all services and operations specified are *allowed*. Any API calls not specified are not allowed.
 * blacklist – disallow access to the services and operations specified. All other API calls allowed.
 Script
-Click RestrictClientCalls.cloudcode.js.zip to download the file.
+Click [RestrictClientCalls.cloudcode.js](RestrictClientCalls.cloudcode.js) to download the file.
 
 ## Usage / Setup
 To configure this script, you must first import it into your app.
