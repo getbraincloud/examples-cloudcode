@@ -1,11 +1,11 @@
 # RestrictClientCalls
 ## Purpose
-Allows an app to severely restrict access to brainCloud Client APIs. Very useful if your app has significant security requirements.
+Allows an app to restrict access to brainCloud Client APIs. Very useful if your app has important security requirements.
 
 The script can be configured in one of two ways:
 
 * whitelist – all services and operations specified are *allowed*. Any API calls not specified are not allowed.
-* blacklist – disallow access to the services and operations specified. All other API calls allowed.
+* blacklist – disallow access to the services and operations specified. All other API calls are permitted.
 
 ## Script
 Click [RestrictClientCalls.cloudcode.js](RestrictClientCalls.cloudcode.js) to download the file.

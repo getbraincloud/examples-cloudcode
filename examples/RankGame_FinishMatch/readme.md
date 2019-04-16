@@ -1,6 +1,6 @@
 # RankGame_FinishMatch
 ## Purpose
-Ends a rank match. Adjust the players’ rating and stats if not a tie. Updates player’s standings in a rating’s leaderboard.
+The script ends a ranked match and adjusts the involved players’ rating and stats if it was not a tie. Player’s standings get updated in a rating’s leaderboard so they can compare with other players.
 
 Based on the brainCloud [TicTacToe](https://github.com/getbraincloud/examples-unity) example.
 

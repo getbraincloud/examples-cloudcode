@@ -1,11 +1,11 @@
 # ScriptScheduler
 
 ## Purpose
-This script will schedule a script of an interval, and make sure it is not already scheduled. 
+This script will schedule another script at an interval, after making sure that the given script is not already scheduled. 
 
 If the interval is less then 60 min, it will only make sure there is no duplicate within 1 hour.
 
-If the interval is more then 60 min (i.e not < 60) it will make sure there is no duplicate within 24 hours.
+If the interval is more then 60 min (i.e. not < 60) it will make sure there is no duplicate within 24 hours.
 
 ## Script
 Click [ScriptScheduler.cloudcode.js](ScriptScheduler.cloudcode.js) to download the file
@@ -29,4 +29,4 @@ var schedulerRetVal = scriptProxy.runScript(
 // ...
 ```
 
-In this example, the script will DataCacheUpdate run every 10 minutes, and even if the script is triggered manually it will not cause multiple scheduling of itself.
+In this example, the script will DataCacheUpdate run every 10 minutes, and even if the script is triggered manually, it will not cause multiple scheduling of itself.
