@@ -15,6 +15,6 @@ response;
 // "peerCallable":false,
 // "scriptTimeout":60,
 // "description":"",
-// "parms":"{\\n  \\\"parm1\\\": \\\"value1\\\",\\n  \\\"parm2\\\": \\\"value2\\\"\\n}",
+// "parms":"{\\n}",
 // "version":4,
 // "updatedAt":1555165631606

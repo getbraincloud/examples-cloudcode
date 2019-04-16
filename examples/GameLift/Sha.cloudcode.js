@@ -68,6 +68,6 @@ response;
 // "peerCallable":false,
 // "scriptTimeout":60,
 // "description":"",
-// "parms":"{\\n  \\\"parm1\\\": \\\"value1\\\",\\n  \\\"parm2\\\": \\\"value2\\\"\\n}",
+// "parms":"{\\n  \\\"key\\\": \\\"abc\\\",\\n  \\\"keyEncoding\\\": \\\"TEXT\\\",\\n\\\"string\\\" : \\\"HelloWorld\\\" \\n}",
 // "version":3,
 // "updatedAt":1555165093129

@@ -7,7 +7,8 @@
 var response = {};
 var EmptyJsonScriptData = {};
 var HTTP_Path = "";
-// Get BC Proxies
+
+// Get BC Proxies.
 var scriptProxy = bridge.getScriptServiceProxy();
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -25,7 +26,7 @@ bridge.logDebug("Running the **AWSGameLiftCore** script...", null);
 
 function hmac(key, keyEncoding, string) {
   var JsonScriptData = {
-    "key": string,
+    "key": key,
     "keyEncoding": keyEncoding,
     "string": string
   }
