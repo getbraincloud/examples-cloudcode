@@ -1,6 +1,6 @@
 # PostToLeaderboards
 ## Purpose
-This script allows you to efficiently post to multiple leaderboards.
+This script allows you to post to multiple leaderboards efficiently.
 
 ## Script
 Click [PostToLeaderboards.cloudcode.js](PostToLeaderboards.cloudcode.js) to download the file.

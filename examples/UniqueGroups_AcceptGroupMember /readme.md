@@ -5,7 +5,7 @@ This script allows the app to accept a group join request while enforcing that n
 
 If the user is already in a group, this script will throw a failure message that the user is already in a group.
 
-If the user has more group join requests, this script will clean up the remaining requests.
+If the user has more group join requests, this script will clean up the remaining applications.
 
 ## Script
 Click [UniqueGroups_AcceptGroupMember.cloudcode.js](UniqueGroups_AcceptGroupMember.cloudcode.js) to download the file.
@@ -20,7 +20,7 @@ You call the script in the app via the [RunScript()](https://getbraincloud.com/a
 The script takes the following parameters:
 
 * profileId – profileId of the (potential) new member requesting to join the group
-* groupId – groupId of the group that the (potential) new member is requesting to join
+* groupId – groupId of the group that the (potential) new member is seeking to join
 
 *Example script parameters:*
 ```json
