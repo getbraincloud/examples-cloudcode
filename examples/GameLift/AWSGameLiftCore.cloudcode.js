@@ -1,9 +1,6 @@
-/**
- * @module BrainCloudLift
- * @description Integrate BrainCloud with GameLift.
- * @version 1.0
- * Special Thanks To ChiefGUI for initial Version
- */
+// Integrate brainCloud with GameLift.
+// Special Thanks To ChiefGUI for initial Version
+
 var response = {};
 var EmptyJsonScriptData = {};
 var HTTP_Path = "";
