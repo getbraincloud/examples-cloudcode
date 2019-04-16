@@ -1,4 +1,5 @@
 # ScriptScheduler
+
 ## Purpose
 This script will schedule a script of an interval, and make sure it is not already scheduled. 
 

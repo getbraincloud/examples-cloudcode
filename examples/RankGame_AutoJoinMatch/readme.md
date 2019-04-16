@@ -16,7 +16,7 @@ You call the script in the app via the [RunScript()](https://getbraincloud.com/a
 
 The script takes the following parameters:
 
-* rankRangeDelta – Elo range delta we will accept. A player will 1200 Elo and a delta of 200, will accept matches of players between 1000-1400
+* rankRangeDelta – player rating range delta we will accept. A player at 1200 rating and a delta of 200, will accept matches of players between 1000-1400
 * pushNotificationMessage – Notification opposing player will see. Note: you must first set your app up with push notifications
 
 *Example script parameters*

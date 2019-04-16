@@ -16,7 +16,7 @@ The following scripts implement common operations that may be handy for your app
 To import a script into your app:
 
 * Download the script to your computer
-* Go to the Design | Cloud Code | Scripts page of the portal
-* Choose Import Scripts from the [Import / Export] button
-    * Click [Select], choose the script to import from the file selector
-    * Click [Import]
+* Go to the [**Design | Cloud Code | Scripts**](https://portal.braincloudservers.com/login#/development/serverscripts-edit) page of the portal
+* Choose Import Scripts from the **[Import / Export]** button
+    * Click **[Select]**, choose the script to import from the file selector
+    * Click **[Import]**

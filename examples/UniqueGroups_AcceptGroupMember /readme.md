@@ -1,4 +1,5 @@
 # UniqueGroups_AcceptGroupMember
+
 ## Purpose
 This script allows the app to accept a group join request while enforcing that new group member is only added to the current group.
 
@@ -14,7 +15,7 @@ To configure this script, simply import it into your app.
 
 The script is expected to be called from the over of the group owner after they have viewed join requests of potential new group members.
 
-You call the script in the app via the RunScript() API call.
+You call the script in the app via the [RunScript()](https://getbraincloud.com/apidocs/apiref/index.html#capi-script-runscript) API call.
 
 The script takes the following parameters:
 

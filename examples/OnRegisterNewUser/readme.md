@@ -1,4 +1,5 @@
 # OnRegisterNewUser
+
 ## Purpose
 This script enforces any registration attempts made to brainCloud will fail if the account already exists.
 
