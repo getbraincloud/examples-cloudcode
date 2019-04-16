@@ -1,5 +1,5 @@
-// This script logs and returns whatever is sent to it
-// Useful for initially testing what is being sent to your webhook
+// This script logs and returns whatever is sent to it.
+// Useful for initially testing what is being sent to your webhook.
 
 // Some services (like Facebook!) send parameters with periods in them.
 // MongoDB doesn't like those - so we need to substitute "_" for the periods

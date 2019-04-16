@@ -31,7 +31,7 @@ else if (isForceCreate && isNewUser) {
     response.data.playerName = defaultPlayerName;
 
 
-    // You could also give the new user some starting currency for registering, or setup some default user entities.
+    // You could also give the new user some starting currency for registering, or set up some default user entities.
 
     //TODO: Add your onFirstUserSignup logic here!
 
