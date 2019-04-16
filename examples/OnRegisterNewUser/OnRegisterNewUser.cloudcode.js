@@ -2,17 +2,14 @@
 // Instead, it needs to be added as a post API Hook on Authenticate.
 
 
-
 // From that authenticate call, let's get the isForceCreate and isNewUser.
 // For registering a new user, we expect forceCreate to be true, and newUser to be false.
 isForceCreate = String(data.callingMessage.forceCreate) == "true";
 isNewUser = String(data.message.newUser) == "true";
 
-
 var response = {};
 response.status = 200;
 response.data = data.message;
-
 
 // When we are attempting to register a new user, if the user already exists, let's throw an error.
 if (isForceCreate && !isNewUser) {

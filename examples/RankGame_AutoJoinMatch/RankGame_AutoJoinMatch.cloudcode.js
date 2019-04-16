@@ -3,15 +3,13 @@ const MATCH_STATE = "MATCH_STATE";
 const LOOKING_FOR_MATCH = "LOOKING_FOR_MATCH";
 const FOUND_MATCH = "FOUND_MATCH";
 
-
 var response = {};
-
 
 var pushNotificationMessage = data.pushNotificationMessage;
 
 // We are going to look for one player that is also looking for a match. And who is within a given range rating, compared to the current player.
 var numberOfResults = 1;
-var jsonAttributes = { MATCH_STATE : LOOKING_FOR_MATCH };
+var jsonAttributes = { MATCH_STATE: LOOKING_FOR_MATCH };
 var rankRangeDelta = data.rankRangeDelta;
 
 var matchMakingProxy = bridge.getMatchMakingServiceProxy();
@@ -21,27 +19,27 @@ response = matchMakingProxy.findPlayersWithAttributes(
     jsonAttributes);
 
 // If we haven't found a player looking for a match
-if(response.data.matchesFound.length === 0) {
+if (response.data.matchesFound.length === 0) {
     response = NO_MATCHES_FOUND_MESSAGE;
 
-    //  We are going to flag the current player as look for a match, so the next player to make this script call will auto-match with this current player
-    var attributesToUpdate = { MATCH_STATE : LOOKING_FOR_MATCH };
+    // We are going to flag the current player as look for a match, so the next player to make this script call will auto-match with this current player
+    var attributesToUpdate = { MATCH_STATE: LOOKING_FOR_MATCH };
     var playerStateProxy = bridge.getPlayerStateServiceProxy();
     playerStateProxy.updateAttributes(attributesToUpdate, false);
 
 }
 // Else, if we have found a player looking for a match.
 else {
-	// We are going to flag that player as no longer looking for a match.
-	var matchedPlayerId = response.data.matchesFound[0].playerId;
+    // We are going to flag that player as no longer looking for a match.
+    var matchedPlayerId = response.data.matchesFound[0].playerId;
     var matchedSession = bridge.getSessionForProfile(matchedPlayerId);
     var matchedPlayerStateProxy = bridge.getPlayerStateServiceProxy(matchedSession);
-    var attributesToUpdate = { MATCH_STATE : FOUND_MATCH };
+    var attributesToUpdate = { MATCH_STATE: FOUND_MATCH };
     matchedPlayerStateProxy.updateAttributes(attributesToUpdate, false);
 
-	// Then we are going to setup the details for the match.
+    // Then we are going to setup the details for the match.
     var currentProfileId = bridge.getProfileId();
-    var players = [ { "platform": "BC", "id": matchedPlayerId } ];
+    var players = [{ "platform": "BC", "id": matchedPlayerId }];
 
     var asyncMatchProxy = bridge.getAsyncMatchServiceProxy();
 
@@ -49,16 +47,16 @@ else {
     var yourTurnFirst = true;
     var nextPlayer = yourTurnFirst ? currentProfileId : matchedPlayerId;
 
-	// And we are going to setup up our game's logic. Our example is a TicTacToe game: https://github.com/getbraincloud/examples-unity/tree/master/TicTacToe
+    // And we are going to setup up our game's logic. Our example is a TicTacToe game: https://github.com/getbraincloud/examples-unity/tree/master/TicTacToe
     var jsonSummary = {
-        "players" : [
-            { "profileId" : currentProfileId, "token" : yourTurnFirst ? "X" : "O" },
-            { "profileId" : matchedPlayerId, "token" : yourTurnFirst ? "O" : "X" }
+        "players": [
+            { "profileId": currentProfileId, "token": yourTurnFirst ? "X" : "O" },
+            { "profileId": matchedPlayerId, "token": yourTurnFirst ? "O" : "X" }
         ]
     }
-    var jsonMatchState = { "board" : "#########" };
+    var jsonMatchState = { "board": "#########" };
 
-	//  Finally, we make the createMatchWithInitialTurn call to create the match.
+    // Finally, we make the createMatchWithInitialTurn call to create the match.
     response = asyncMatchProxy.createMatchWithInitialTurn(players, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary);
 }
 

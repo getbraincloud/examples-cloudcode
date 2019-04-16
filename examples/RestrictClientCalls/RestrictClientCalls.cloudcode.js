@@ -1,42 +1,39 @@
 var response = false;
 
-// Only enforce if this call is not from *within* a cloud-code script
-if ( !data.message.ccCall) {
+// Only enforce if this call is not from *within* a cloud-code script.
+if (!data.message.ccCall) {
 
     var listtype = data.parms.listtype;
     var services = data.parms.services;
-    
-    // Default response differs by type of list
+
+    // Default response differs by type of list.
     if (listtype == "whitelist") {
         response = false;
     } else {
         response = true;
     }
-    
-    // Look to see if the service 
+
+    // Look to see if the service.
     if (services.hasOwnProperty(data.service)) {
-        
+
         var ops = services[data.service];
-        
+
         if (Object.keys(ops).length > 0) {
-            
+
             if (ops.hasOwnProperty(data.operation)) {
                 response = (listtype == "whitelist");
             }
-            
+
         } else {
             // If no ops, that means all...
             response = (listtype == "whitelist");
         }
-        
     }
-
 } else {
     response = true;
 }
 
 response;
-
 
 
 //*** ------------- brainCloud meta-data begins now - do not hand-edit -----------------

@@ -1,8 +1,6 @@
 // This cloud code script isn't called from the client.
 // Instead, it needs to be added as a post API Hook on Authenticate.
 
-
-
 var response = {};
 
 // By default, we allow the authenticate (and return the original response)
@@ -30,8 +28,6 @@ if (attr.data.attributes.banned === "true") {
 }
 
 response; //return the object
-
-
 
 
 //*** ------------- brainCloud meta-data begins now - do not hand-edit -----------------

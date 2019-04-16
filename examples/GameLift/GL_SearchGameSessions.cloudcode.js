@@ -1,23 +1,25 @@
 var response = {};
 var CoreScript = "AWSGameLiftCore";
-var FleetID = ""; // Either Write here or use data object
+var FleetID = ""; // Either write here or use data object.
+
 // Proxy Scripting
 var scriptProxy = bridge.getScriptServiceProxy();
 
-// Important Part Is here...
+// Important part is here...
 var jsonScriptData = {
-    region: "us-east-1", // feel free to change this value to whatever region you need
-    action: 'SearchGameSessions',
-    payload: {
-      FleetId: FleetID
-    }
+  region: "us-east-1", // Feel free to change this value to whatever region you need.
+  action: 'SearchGameSessions',
+  payload: {
+    FleetId: FleetID
+  }
 };
-// Just to Debug...
+
+// Just to debug...
 bridge.logDebug("Running the **GL_CreateGameSession** script...", null);
 
 var postResult = scriptProxy.runScript(CoreScript, jsonScriptData);
 
-response.result = postResult.data.response; // Now You Can Get It
+response.result = postResult.data.response; // Now you can get it.
 
 response;
 //*** ------------- brainCloud meta-data begins now - do not hand-edit -----------------

@@ -44,6 +44,7 @@ else {
 
 
     var groupProxy = bridge.getGroupServiceProxy();
+
     // Request Approved!
     var approvedRequest = groupProxy.approveGroupJoinRequest(groupId, profileId, role, attributes);
 

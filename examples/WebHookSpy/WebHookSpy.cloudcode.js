@@ -21,18 +21,18 @@ function safeMap(aMap) {
 
 var response = {};
 
-// Clone the request parameters
+// Clone the request parameters.
 var webHookParms = JSON.parse(JSON.stringify(data));
 
-// Make the arguments and parameters mongoDB-safe
+// Make the arguments and parameters mongoDB-safe.
 webHookParms.headers = safeMap(data.headers);
 webHookParms.parameters = safeMap(data.parameters);
 
-// Log the safe version of the parameters received
+// Log the safe version of the parameters received.
 var logService = bridge.getLogServiceProxy();
 logService.logInfo("Webhook [ " + webHookParms.requestUrl + " ] - dumping parameters...", JSON.stringify(webHookParms));
 
-// Construct a response
+// Construct a response.
 response.jsonResponse = {};
 response.message = "Webhook received";
 response.jsonResponse.receivedInCCdata = data;

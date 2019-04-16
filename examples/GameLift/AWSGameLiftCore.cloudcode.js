@@ -7,7 +7,7 @@
 var response = {};
 var EmptyJsonScriptData = {};
 var HTTP_Path = "";
-//Get BC Proxies
+// Get BC Proxies
 var scriptProxy = bridge.getScriptServiceProxy();
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -20,31 +20,31 @@ var HTTPserviceCode = "GameLift_" + kebabToSnake(data.region).toString();
 // GameLift uses 'POST' as the default one for every and each action.
 var DEFAULT_REQUEST_METHOD = 'POST'
 
-// Debugging BrainCloud Script
+// Debugging BrainCloud Script.
 bridge.logDebug("Running the **AWSGameLiftCore** script...", null);
 
-function hmac (key, keyEncoding, string) {
-    var JsonScriptData = {
-        "key":string,
-        "keyEncoding":keyEncoding,
-        "string":string
-    }
-    var postResult = scriptProxy.runScript("Sha", JsonScriptData)
-   return postResult.data.response.hash
+function hmac(key, keyEncoding, string) {
+  var JsonScriptData = {
+    "key": string,
+    "keyEncoding": keyEncoding,
+    "string": string
+  }
+  var postResult = scriptProxy.runScript("Sha", JsonScriptData)
+  return postResult.data.response.hash
 }
 
-function hash (string) {
-    var JsonScriptData = {
-        "string":string
-    }
-    var postResult = scriptProxy.runScript("Sha256HEX", JsonScriptData)
+function hash(string) {
+  var JsonScriptData = {
+    "string": string
+  }
+  var postResult = scriptProxy.runScript("Sha256HEX", JsonScriptData)
   return postResult.data.response.hash
 }
 
 function kebabToSnake(str) {
-  //replace all dashes with
+  // Replace all dashes with.
   var myString = str.replace(/-/g, "_");
-  //return str
+  // Return string.
   return myString;
 }
 
@@ -109,7 +109,7 @@ var AWS = function (options) {
  * Get the host of which requests will be performed against.
  * @param {string} region
  */
-function getHost (region) {
+function getHost(region) {
   return SERVICE + '.' + region + '.amazonaws.com'
 }
 
@@ -122,12 +122,12 @@ function getHost (region) {
  * @param {Object} [options.local] - the local object, containing information to make the request ping against GameLiftLocal
  * @returns {string}
  */
-function getURLPath (options) {
+function getURLPath(options) {
   if (options.hasParameters) {
     path = +'?' + options.canonicalQueryString
   }
-  if(path != null)
-  return path
+  if (path != null)
+    return path
 }
 
 AWS.prototype.getCanonicalHeaders = function () {
@@ -224,7 +224,7 @@ AWS.prototype.awsDateTimeFormatShort = function (date) {
   return this.awsDateTimeFormat(date).substring(0, 8)
 }
 
-// Start Calling AWS //
+// Start Calling AWS
 response = new AWS(data);
 
 // Send Back Response

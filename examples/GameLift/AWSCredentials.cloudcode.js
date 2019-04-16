@@ -1,8 +1,8 @@
 var response = {};
 
 var AWS_CREDENTIALS = {
-  key: '123', // place your key here.
-  secret: '321' // place your secret here.
+  key: '123', // Place your key here.
+  secret: '321' // Place your secret here.
 }
 
 response.AWSCredentials = AWS_CREDENTIALS;

@@ -27,10 +27,7 @@ for (var i = 0; i < leaderboards.length; i++) {
 
 }
 
-
 response; // Return the results
-
-
 
 
 //*** ------------- brainCloud meta-data begins now - do not hand-edit -----------------

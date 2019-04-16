@@ -5,23 +5,23 @@ const searchSpan = interval < 60 ? 60 : 60 * 24;
 
 var _script = bridge.getScriptServiceProxy();
 
-// Find scheduled jobs matching given script name
+// Find scheduled jobs matching given script name.
 var dateTimeSpanMinsFromNowInMillis = new Date().getTime() + (searchSpan * 60 * 1000);
 var result = _script.getScheduledCloudScripts(dateTimeSpanMinsFromNowInMillis);
 
 var nowTime = new Date().getTime();
 
 if ((result.status == 200) && (result.data !== null)) {
-    // Find those that match script name want
+    // Find those that match script name want.
     for (var i = 0; i < result.data.scheduledJobs.length; i++) {
-        // delete any that match
+        // Delete any that match.
         if (result.data.scheduledJobs[i].scriptName === scriptName && result.data.scheduledJobs[i].scheduledStartTime > nowTime) {
             _script.cancelScheduledScript(result.data.scheduledJobs[i].jobId);
         }
     }
 }
 
-// schedule single replacement 
+// Schedule single replacement.
 var retVal = _script.scheduleRunScriptMinutes(scriptName, args, interval);
 
 retVal;

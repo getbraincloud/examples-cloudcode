@@ -12,7 +12,6 @@ var isTie = data.isTie;
 
 var debug = [];
 
-
 // We are going to mark the current match as complete.
 var ownerSession = bridge.getSessionForProfile(ownerId);
 var asyncMatchProxy = bridge.getAsyncMatchServiceProxy(ownerSession);
