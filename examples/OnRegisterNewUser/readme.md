@@ -13,6 +13,6 @@ Click [OnRegisterNewUser.cloudcode.js](OnRegisterNewUser.cloudcode.js) to downlo
 ## Usage / Setup
 To configure this script, simply import it into your app.
 
-The script assumes any authenticate call made with forceCreate set to false is a login attempt. And any authenticate call made with forceCreate set to false is a registration attempt.
+The script assumes any authenticate call made with forceCreate set to false is a login attempt. And any authenticate call made with forceCreate set to true is a registration attempt.
 
 You can have the script run on every authenticate call by setting it as a [Post API Hook](https://getbraincloud.com/apidocs/cloud-code-central/cloud-code-tutorials/cc-tutorial-4-pre-and-post-hooks/) on Authenticate.
