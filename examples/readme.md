@@ -9,8 +9,9 @@ The following scripts implement common operations that may be handy for your app
 * [RankGame_FinishMatch](RankGame_FinishMatch/readme.md) – handle the conclusion of a match. Adjust player ratings based on winner/loser
 * [RestrictClientCalls](RestrictClientCalls/readme.md) – restricts the client’s ability to call brainCloud APIs. Provides additional security.
 * [ScriptScheduler](ScriptScheduler/readme.md) – helper script for regularly recurring cloud code jobs
-* [UniqueGroups_AcceptGroupMember](UniqueGroups_AcceptGroupMember/readme.md) – enforce new group members to exist in only one group at a time
+* [SharedScripts](SharedScripts/readme.md) – example of sharing scripts between cloud code with [Global Properties](https://getbraincloud.com/apidocs/apiref/#cc-bridge-getglobalproperty)
 * [WebHookSpy](WebHookSpy/readme.md) – view the parameters being sent to a webhook
+* [UniqueGroups_AcceptGroupMember](UniqueGroups_AcceptGroupMember/readme.md) – enforce new group members to exist in only one group at a time
 
 ## Importing Scripts
 To import a script into your app:
